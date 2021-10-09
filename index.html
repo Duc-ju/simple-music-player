@@ -317,7 +317,8 @@
 			loadConfig : function () {
 				this.isRandom = this.config.isRandom;
 				this.isRepeat = this.config.isRepeat;
-				
+				if(this.isRandom){ randomButton.classList.add("active")}
+				if(this.isRepeat){ repeatButton.classList.add("active")}
 			},
 			nextSong: function () {
 				this.currentIndex++;
@@ -352,8 +353,7 @@
 				this.loadCurrentSong();
 				this.render()
 
-				if(isRandom) randomButton.classList.add("active")
-				if(isRepeat) repeatButton.classList.add("active")
+				
 			}
 		}
 		app.start();
